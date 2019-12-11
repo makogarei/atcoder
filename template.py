@@ -56,3 +56,13 @@ for i in range(2 ** n):
     if (total <= money):
         print(total, bag)
 
+#bit全探索（https://blog.rossywhite.com/2018/08/06/bit-search/）
+A = [0, 1, 2, 3]
+n = len(A)
+for i in range(2**n):
+    output = []
+    for j in range(len(A)):
+        if ((i >> j) & 1) == 1:
+            output.append(A[j])
+    print(output)
+
